@@ -5,6 +5,10 @@
 
   &.dark {
     background: #333;
+
+    button .toogle-button-theme{
+      background: #FFF;
+    }
   }
 
   aside {

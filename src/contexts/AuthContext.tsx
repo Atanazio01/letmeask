@@ -20,7 +20,7 @@ export const AuthContext = createContext({} as AuthContextType);
 
 export function AuthContextProvider(props: AuthContextProviderProps) {
   const [user, setUser] = useState<User>();
-  const [loading, setLoading] = useState(true); // melhorar * atenção * feito na live
+  const [loading, setLoading] = useState(false); // melhorar * atenção * feito na live
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
