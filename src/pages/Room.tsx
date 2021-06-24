@@ -1,5 +1,5 @@
 import { useState, FormEvent, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 import logoImg from "../assets/images/logo.svg";
 import { Button } from "../components/Button";
@@ -39,12 +39,19 @@ type RoomParams = {
 
 export function Room() {
   const { user } = useAuth();
+  const history = useHistory();
   const params = useParams<RoomParams>();
   const [newQuestion, setNewQuestion] = useState("");
   const [questions, setQuestions] = useState<Question[]>([]);
   const [title, setTitle] = useState("");
 
   const roomId = params.id;
+
+  useEffect(() => {
+    if (!user) {
+      history.push("/");
+    }
+  }, [user, history]);
 
   useEffect(() => {
     const roomRef = database.ref(`rooms/${roomId}`);
@@ -62,7 +69,8 @@ export function Room() {
             isHighlighted: value.isHighlighted,
             isAnswered: value.isAnswered,
           };
-        });
+        }
+      );
 
       setTitle(databaseRoom.title);
       setQuestions(parsedQuestions);

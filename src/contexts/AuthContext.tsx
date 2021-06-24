@@ -14,12 +14,13 @@ type AuthContextType = {
 
 type AuthContextProviderProps = {
   children: ReactNode;
-}
+};
 
 export const AuthContext = createContext({} as AuthContextType);
 
 export function AuthContextProvider(props: AuthContextProviderProps) {
   const [user, setUser] = useState<User>();
+  const [loading, setLoading] = useState(true); // melhorar * atenção * feito na live
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -35,6 +36,7 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
           name: displayName,
           avatar: photoURL,
         });
+        setLoading(false);
       }
     });
 
@@ -61,6 +63,11 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
         avatar: photoURL,
       });
     }
+  }
+
+  // * ATENÇÃO * Feito na live
+  if (loading) {
+    return <p>Carregando...</p>;
   }
 
   return (
