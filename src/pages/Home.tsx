@@ -57,7 +57,7 @@ export function Home() {
 
       <main>
         <div className="main-content">
-          <button onClick={toogletheme}>Toogle</button>
+          <button onClick={toogletheme} className='toogle-button-theme'>Toogle</button>
           <img src={logoImg} alt="Letmeask" />
           <button onClick={handleCreateRoom} className="create-room">
             <img src={googleIconImg} alt="Logo do Google" />
