@@ -1,4 +1,4 @@
-<h1 align="center"><img alt="Letmeask" src="https://github.com/Atanazio01/letmeask/blob/master/img/logo.svg"> </h1>
+<h1 align="center"><img alt="Letmeask" src="https://github.com/Atanazio01/letmeask/blob/master/src/assets/images/logo.svg"> </h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -18,7 +18,7 @@
 <br>
 
 <p align="center">
-  <img alt="letmeask" src="https://github.com/Atanazio01/letmeask/blob/master/img/HomeApp.JPG" width="100%">
+  <img alt="letmeask" src="https://github.com/Atanazio01/letmeask/blob/master/src/assets/images/HomeApp.JPG" width="100%">
 </p>
 
 ## 🛠 Tecnologias
