@@ -1,16 +1,16 @@
 import { useHistory } from "react-router-dom";
 
-import illustrationImg from "../assets/images/illustration.svg";
-import logoImg from "../assets/images/logo.svg";
-import googleIconImg from "../assets/images/google-icon.svg";
+import illustrationImg from "../../assets/images/illustration.svg";
+import logoImg from "../../assets/images/logo.svg";
+import googleIconImg from "../../assets/images/google-icon.svg";
 
-import { Button } from "../components/Button";
+import { Button } from "../../components/Button";
 
-import "../styles/auth.scss";
-import { useAuth } from "../hooks/useAuth";
+import "./styles.scss";
+import { useAuth } from "../../hooks/useAuth";
 import { FormEvent, useState } from "react";
-import { database } from "../services/firebase";
-import { useTheme } from "../hooks/useTheme";
+import { database } from "../../services/firebase";
+import { useTheme } from "../../hooks/useTheme";
 
 export function Home() {
   const history = useHistory();
@@ -41,8 +41,8 @@ export function Home() {
       return;
     }
 
-    if(roomRef.val().endedAt){
-      alert('Room already closed.')
+    if (roomRef.val().endedAt) {
+      alert("Room already closed.");
       return;
     }
 
@@ -62,7 +62,9 @@ export function Home() {
 
       <main>
         <div className="main-content">
-          <button onClick={toogletheme} className='toogle-button-theme'>Toogle</button>
+          <button onClick={toogletheme} className="toogle-button-theme">
+            Toogle
+          </button>
           <img src={logoImg} alt="Letmeask" />
           <button onClick={handleCreateRoom} className="create-room">
             <img src={googleIconImg} alt="Logo do Google" />
