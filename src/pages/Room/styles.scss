@@ -1,8 +1,6 @@
 #page-room {
   &.dark {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+    position:sticky;
     background: #333;
 
     .content {

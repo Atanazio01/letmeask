@@ -1,8 +1,6 @@
 #page-room {
   &.dark {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+    position: sticky;
     background: #333;
 
     .content {
@@ -36,6 +34,25 @@
     border-bottom: 1px solid #e2e2e2;
 
     .content {
+
+      .toogle-button-theme {
+        height: 40px;
+        width: 80px;
+        border-radius: 8px;
+        font-weight: 500;
+        background: #494C4B;
+        color: #fff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+        border: 0;
+
+        transition: filter 0.2s;
+      }
+      
       max-width: 1120px;
       margin: 0 auto;
       display: flex;
