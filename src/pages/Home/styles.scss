@@ -5,8 +5,14 @@
 
   &.dark {
     background: #333;
+    svg {
+      path:nth-child(-n + 5) {
+        fill: #fefefea6;
+      }
+    }
 
-    button .toogle-button-theme{
+    .toogle-button-theme{
+      color:#333;
       background: #FFF;
     }
   }
@@ -23,7 +29,7 @@
 
     padding: 120px 80px;
 
-    img {
+    svg {
       max-width: 320px;
     }
 
@@ -58,7 +64,7 @@
     align-items: stretch;
     text-align: center;
 
-    > img {
+    > svg {
       align-self: center;
     }
     
@@ -98,11 +104,11 @@
   }
 
   .toogle-button-theme{
-    margin-bottom: 64px;
+    margin-bottom: 65px;
     height: 50px;
     border-radius: 8px;
     font-weight: 500;
-    background: #835afd;
+    background: #494C4B;
     color: #FFF;
 
     display: flex;

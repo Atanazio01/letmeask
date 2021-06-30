@@ -1,4 +1,36 @@
 #page-room {
+  &.dark {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: #333;
+
+    .content {
+      .toogle-button-theme {
+        color: #333;
+        background: #fff;
+      }
+      svg {
+        max-height: 45px;
+        path:nth-child(-n + 5) {
+          fill: #fefefea6;
+        }
+      }
+    }
+    .room-title {
+      h1 {
+        color: #fefefe;
+      }
+    }
+
+    .form-footer {
+      .user-info {
+        span {
+          color: #fefefe;
+        }
+      }
+    }
+  }
   header {
     padding: 24px;
     border-bottom: 1px solid #e2e2e2;

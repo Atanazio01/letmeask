@@ -1,9 +1,60 @@
 #page-room {
+  &.dark {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background: #333;
+
+    .content {
+      .toogle-button-theme {
+        color: #333;
+        background: #fff;
+      }
+      svg {
+        max-height: 45px;
+        path:nth-child(-n + 5) {
+          fill: #fefefea6;
+        }
+      }
+    }
+    .room-title {
+      h1 {
+        color: #fefefe;
+      }
+    }
+
+    .form-footer {
+      .user-info {
+        span {
+          color: #fefefe;
+        }
+      }
+    }
+  }
+
   header {
     padding: 24px;
     border-bottom: 1px solid #e2e2e2;
 
     .content {
+      .toogle-button-theme {
+        height: 40px;
+        width: 80px;
+        border-radius: 8px;
+        font-weight: 500;
+        background: #494C4B;
+        color: #fff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        cursor: pointer;
+        border: 0;
+
+        transition: filter 0.2s;
+      }
+
       max-width: 1120px;
       margin: 0 auto;
       display: flex;
@@ -59,7 +110,7 @@
         border-radius: 8px;
         background: #fefefe;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-        resize: vertical;
+        resize: none;
         min-height: 130px;
       }
 
