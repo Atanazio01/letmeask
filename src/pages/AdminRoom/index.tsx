@@ -11,7 +11,7 @@ import { RoomCode } from "../../components/RoomCode";
 // import { useAuth } from "../hooks/useAuth";
 import { useRoom } from "../../hooks/useRoom";
 
-import "./styles.scss";
+import "./stylesAdmin.scss";
 import { database } from "../../services/firebase";
 import { useTheme } from "../../hooks/useTheme";
 
@@ -59,7 +59,6 @@ export function AdminRoom() {
   return (
     <div id="page-room" className={theme}>
       <header>
-        <div></div>
         <div className="content">
           {/* <img src={logoImg} alt="Letmeask" /> */}
           <svg

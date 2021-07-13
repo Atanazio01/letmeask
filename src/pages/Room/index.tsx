@@ -69,7 +69,7 @@ export function Room() {
   return (
     <div id="page-room" className={theme}>
       <header>
-        <div className="content">
+        <div className={`content`}>
           {/* <img src={logoImg} alt="Letmeask" /> */}
           <svg
             width="94"
@@ -161,10 +161,17 @@ export function Room() {
               </linearGradient>
             </defs>
           </svg>
-          <RoomCode code={roomId} />
-          <button onClick={toogletheme} className="toogle-button-theme">
-            Tema
-          </button>
+          <div className="menu-toogle">
+            <div className="one"></div>
+            <div className="two"></div>
+            <div className="three"></div>
+          </div>
+          <div className="menu-header">
+            <RoomCode code={roomId} />
+            <button onClick={toogletheme} className="toogle-button-theme">
+              Tema
+            </button>
+          </div>
         </div>
       </header>
 
@@ -176,6 +183,7 @@ export function Room() {
 
         <form onSubmit={handleSendQuestion}>
           <textarea
+            maxLength={55}
             placeholder="O que você quer perguntar?"
             onChange={(event) => setNewQuestion(event.target.value)}
             value={newQuestion}

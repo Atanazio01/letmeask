@@ -1,3 +1,9 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
 #page-room {
   &.dark {
     position: sticky;
@@ -34,13 +40,19 @@
     border-bottom: 1px solid #e2e2e2;
 
     .content {
+      width: 90%;
+      max-width: 980px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
       .toogle-button-theme {
         height: 40px;
         width: 80px;
         border-radius: 8px;
         font-weight: 500;
-        background: #494C4B;
+        background: #835afd;
         color: #fff;
 
         display: flex;
@@ -52,31 +64,34 @@
 
         transition: filter 0.2s;
       }
-      
-      max-width: 1120px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
 
-      > img {
+      img {
         max-height: 45px;
+        position: absolute;
       }
 
       > div {
         display: flex;
-        gap: 16px; /* espaçamento entre items */
+        gap: 1.6rem; /* espaçamento entre items */
+        flex-wrap: wrap-reverse;
 
         button {
           height: 40px;
+          margin-left: 50px;
         }
       }
     }
   }
 
   main {
-    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 98rem;
     margin: 0 auto;
+    font-size: 1.6rem;
+    align-items: center;
 
     .room-title {
       margin: 32px 0 24px;
@@ -85,33 +100,22 @@
 
       h1 {
         font-family: "Poppins", sans-serif;
-        font-size: 24px;
+        font-size: 2.4rem;
         color: #29292e;
       }
 
       span {
-        margin-left: 16px;
+        margin-left: 1.6rem;
         background: #e559f9;
         border-radius: 9999px;
-        padding: 8px 16px;
+        padding: 0.8rem 1.6rem;
         color: #fff;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 1.4rem;
       }
     }
 
     form {
-      textarea {
-        width: 100%;
-        border: 0;
-        padding: 16px;
-        border-radius: 8px;
-        background: #fefefe;
-        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-        resize: vertical;
-        min-height: 130px;
-      }
-
       .form-footer {
         display: flex;
         justify-content: space-between;
@@ -121,6 +125,7 @@
         .user-info {
           display: flex;
           align-items: center;
+          margin-right: 16rem;
 
           img {
             width: 32px;
@@ -132,12 +137,12 @@
             margin-left: 8px;
             color: #29292e;
             font-weight: 500;
-            font-size: 14px;
+            font-size: 1.4rem;
           }
         }
 
         > span {
-          font-size: 14px;
+          font-size: 1.4rem;
           color: #737380;
           font-weight: 500;
 
@@ -146,7 +151,7 @@
             border: 0;
             color: #835afd;
             text-decoration: underline;
-            font-size: 14px;
+            font-size: 1.4rem;
             cursor: pointer;
           }
         }
@@ -155,6 +160,53 @@
 
     .question-list {
       margin-top: 32px;
+      .user-info {
+        margin-right: 16rem;
+      }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+// @media (max-width: 641px) {
+//   header {
+//     .content {
+//       .menu-header {
+//         display: none;
+//       }
+//     }
+//   }
+// }
+
+@media (max-width: 683px) {
+  header {
+    .content {
+      > svg {
+        left: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .question-list {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 425px) {
+  .question-list {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 430px) {
+  html {
+    width: 50rem;
   }
 }

@@ -31,11 +31,13 @@ export function Question({
     >
       <p>{content}</p>
       <footer>
-        <div className="user-info">
-          <img src={author.avatar} alt={author.name} />
-          <span>{author.name}</span>
+        <div>
+          <div className="user-info">
+            <img src={author.avatar} alt={author.name} />
+            <span>{author.name}</span>
+          </div>
+          <div className="button-formater">{children}</div>
         </div>
-        <div>{children}</div>
       </footer>
     </div>
   );

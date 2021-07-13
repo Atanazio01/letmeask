@@ -1,6 +1,12 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+}
 #page-room {
   &.dark {
-    position:sticky;
+    position: sticky;
     background: #333;
 
     .content {
@@ -31,16 +37,18 @@
   }
 
   header {
-    padding: 24px;
+    padding: 2.4rem;
     border-bottom: 1px solid #e2e2e2;
-
+    display: flex;
     .content {
+      display: flex;
+      align-items: center;
       .toogle-button-theme {
         height: 40px;
         width: 80px;
         border-radius: 8px;
         font-weight: 500;
-        background: #494C4B;
+        background: #835afd;
         color: #fff;
 
         display: flex;
@@ -52,8 +60,8 @@
 
         transition: filter 0.2s;
       }
-
-      max-width: 1120px;
+      width: 90%;
+      max-width: 980px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -61,11 +69,14 @@
 
       > img {
         max-height: 45px;
+        position: absolute;
       }
 
       > div {
         display: flex;
-        gap: 16px; /* espaçamento entre items */
+        gap: 1.6px; /* espaçamento entre items */
+        flex-wrap: inherit;
+        align-items: center;
 
         button {
           height: 40px;
@@ -75,8 +86,13 @@
   }
 
   main {
-    max-width: 800px;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 90%;
+    max-width: 98rem;
+    // margin: 0 auto;
+    font-size: 1.6rem;
 
     .room-title {
       margin: 32px 0 24px;
@@ -85,18 +101,18 @@
 
       h1 {
         font-family: "Poppins", sans-serif;
-        font-size: 24px;
+        font-size: 2.4rem;
         color: #29292e;
       }
 
       span {
-        margin-left: 16px;
+        margin-left: 1.6rem;
         background: #e559f9;
         border-radius: 9999px;
-        padding: 8px 16px;
+        padding: 0.8rem 1.6rem;
         color: #fff;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 1.4rem;
       }
     }
 
@@ -104,7 +120,7 @@
       textarea {
         width: 100%;
         border: 0;
-        padding: 16px;
+        padding: 1.6rem;
         border-radius: 8px;
         background: #fefefe;
         box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
@@ -132,12 +148,12 @@
             margin-left: 8px;
             color: #29292e;
             font-weight: 500;
-            font-size: 14px;
+            font-size: 1.4rem;
           }
         }
 
         > span {
-          font-size: 14px;
+          font-size: 1.4rem;
           color: #737380;
           font-weight: 500;
 
@@ -146,7 +162,7 @@
             border: 0;
             color: #835afd;
             text-decoration: underline;
-            font-size: 14px;
+            font-size: 1.4rem;
             cursor: pointer;
           }
         }
@@ -155,6 +171,145 @@
 
     .question-list {
       margin-top: 32px;
+      .user-info {
+        margin-right: 16rem;
+      }
     }
+  }
+}
+
+@media (max-width: 550px) {
+  .question-list {
+    align-items: flex-start;
+    margin-right: 15px;
+  }
+  form {
+    textarea {
+      margin-left: 50px;
+      // margin-right: 5px;
+    }
+    .form-footer {
+      margin: 0px 25px;
+    }
+  }
+}
+
+@media (max-width: 683px) {
+  #page-room {
+    width: 100%;
+    header {
+      .content {
+        .menu-header {
+          display: none;
+        }
+        .one,
+        .two,
+        .three {
+          background-color: #835afd;
+          height: 5px;
+          width: 100%;
+          margin: 2px auto;
+
+          transition-duration: 0.3s;
+        }
+        .menu-toogle {
+          display: flex;
+          gap: 1px;
+          width: 40px;
+          height: 40px;
+          margin-right: 2px;
+        }
+
+        /* full screen */
+      }
+      .on {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100vw;
+        height: 100vh;
+
+        background-color: #29292e;
+
+        z-index: 10;
+
+        > svg {
+          position: absolute;
+          top: 15px;
+          left: 1rem;
+        }
+
+        .menu-header {
+          width: 100%;
+          .toogle-button-theme {
+            margin-left: 100px;
+          }
+          left: 1rem;
+          display: block;
+          position: absolute;
+          top: 80px;
+          button {
+            margin: 10px;
+          }
+        }
+
+        .menu-toogle {
+          position: absolute;
+          right: 12px;
+          top: 15px;
+        }
+
+        .menu-toogle .three {
+          transform: rotate(45deg) translate(7px, 7px);
+        }
+
+        .menu-toogle .two {
+          opacity: 0;
+        }
+
+        .menu-toogle .one {
+          transform: rotate(-45deg) translate(12px, -12px);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  header {
+    .content {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  form {
+    textarea {
+      max-width: 45.0rem;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .question-list {
+    margin-left: 5px;
+  }
+  form {
+    margin-left: 5px;
+    textarea {
+      max-width: 350px;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  html {
+    width: 49rem;
+  }
+  textarea {
+    max-width: 330px;
+    flex-direction: row;
   }
 }
