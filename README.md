@@ -46,6 +46,7 @@ Você pode acessar esse projeto através [desse link](https://letmeask-11b07.web
   - yarn add @types/react-router-dom
   - yarn add classnames
 - Inicie seu app com `yarn start`
+- Lembrando que será necessário criar uma conta no [Firebase](https://firebase.google.com/) e um projeto para disponibilizar um Realtime Database.
 
 ## 📄 Licença
 
